@@ -9,12 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-  override func viewDidLoad() {
+    
+    // outlets Buttons
+    
+    @IBOutlet weak var Card0: UIButton!
+    
+    @IBOutlet weak var Card1: UIButton!
+    
+    @IBOutlet weak var Card2: UIButton!
+    
+    var myCards:[UIImage] = []
+    
+    override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+   
+        myCards = []
   }
 
 
 }
+
 
