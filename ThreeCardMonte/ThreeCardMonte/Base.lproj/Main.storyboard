@@ -23,8 +23,8 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Three Card Monte">
                                         <attributes>
-                                            <color key="NSBackgroundColor" red="0.7549306370176192" green="1" blue="0.76521492425970594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <color key="NSColor" red="1" green="0.075391222653428791" blue="0.36079484764651626" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="NSBackgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="19" name="TimesNewRomanPS-ItalicMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -32,34 +32,67 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJg-iS-v15">
-                                <rect key="frame" x="147" y="348" width="109" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cardBackRed"/>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3c-ty-3TG">
-                                <rect key="frame" x="264" y="348" width="111" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cardBackRed"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TP9-et-Ij3">
-                                <rect key="frame" x="32" y="348" width="107" height="169"/>
+                                <rect key="frame" x="0.0" y="348" width="134" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="shuffledCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b3I-gM-Kc7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlx-Xv-eOx">
+                                <rect key="frame" x="129" y="348" width="129" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Card1" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="shuffledCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wxg-nI-IIO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEZ-Z0-1Yy">
+                                <rect key="frame" x="253" y="347" width="122" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Card2" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="shuffledCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j6q-sa-HYY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please pick a Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWp-xK-p7h">
+                                <rect key="frame" x="104" y="555" width="154" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mMU-nI-0yt">
+                                <rect key="frame" x="143" y="675" width="67" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Game">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="New Game">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Times-Italic"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="NewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mo6-iA-ag4"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="Card0" destination="TP9-et-Ij3" id="5kD-52-pIU"/>
-                        <outlet property="Card1" destination="pJg-iS-v15" id="c71-lw-YTX"/>
-                        <outlet property="Card2" destination="Z3c-ty-3TG" id="M9v-ZS-d2P"/>
+                        <outlet property="Card1" destination="nlx-Xv-eOx" id="n5Q-my-ajE"/>
+                        <outlet property="Card2" destination="DEZ-Z0-1Yy" id="CbH-6X-ShP"/>
+                        <outlet property="displayLabel" destination="fWp-xK-p7h" id="q6J-Kd-Hwf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109.59999999999999" y="26.53673163418291"/>
+            <point key="canvasLocation" x="109.59999999999999" y="25.862068965517242"/>
         </scene>
     </scenes>
     <resources>
